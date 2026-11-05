@@ -1,0 +1,40 @@
+{
+  "features": [
+    "rate_incentive",
+    "age_yrs",
+    "age_yrs_sq",
+    "mtm_ltv",
+    "credit_score",
+    "hpi_yoy"
+  ],
+  "scale": {
+    "rate_incentive": 1.0,
+    "age_yrs": 1.0,
+    "age_yrs_sq": 1.0,
+    "mtm_ltv": 10.0,
+    "credit_score": 100.0,
+    "hpi_yoy": 0.1
+  },
+  "params": {
+    "const": -4.1775532543335,
+    "rate_incentive": 0.3374107830812204,
+    "age_yrs": 0.02093567072140239,
+    "age_yrs_sq": -0.002886705235905211,
+    "mtm_ltv": -0.07627050156627252,
+    "credit_score": 0.15669979787293767,
+    "hpi_yoy": -0.15974561437443316
+  },
+  "p_values": {
+    "const": 0.0,
+    "rate_incentive": 0.0,
+    "age_yrs": 2.7586832405933815e-15,
+    "age_yrs_sq": 3.1241720139425218e-15,
+    "mtm_ltv": 7.221841865532275e-127,
+    "credit_score": 2.5583910403969607e-42,
+    "hpi_yoy": 3.0595823163517965e-44
+  },
+  "n": 919420,
+  "prepay_events": 31136,
+  "fit_period": "all non-COVID quarters (projection model, not part of the OOT PD validation)",
+  "auc_in_sample": 0.6329399725263845
+}

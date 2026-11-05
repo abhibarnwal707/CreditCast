@@ -1,0 +1,95 @@
+{
+  "default_events": 3747,
+  "default_status": {
+    "no_loss_exit": 1677,
+    "liquidated": 1495,
+    "open": 575
+  },
+  "defaults_with_usable_lgd": 1358,
+  "mean_severity_unclipped": 0.5277580218280054,
+  "mean_lgd": 0.5148719011032653,
+  "mean_lgd_definition": "mean of Actual Loss / zero-balance removal UPB over liquidated defaults, clipped to [0,1]",
+  "median_severity": 0.5161012283687545,
+  "share_severity_gt_1": 0.07511045655375552,
+  "share_severity_lt_0": 0.02577319587628866,
+  "cure_adjusted_mean_lgd_per_default_event": 0.22718366983550364,
+  "liquidation_probability_given_default": 0.44744645799011534,
+  "model": {
+    "liq_intercept": -2.8007978580934423,
+    "liq_slope": 0.34739627171019916,
+    "sev_intercept": 0.49494903057777717,
+    "sev_slope": -0.03271940354196164,
+    "sev_min": 0.05
+  },
+  "model_uncertainty_95ci": {
+    "severity_slope_per_10pp_hpi_change": [
+      -0.049763324500204376,
+      -0.017967117493374207
+    ],
+    "liq_slope_per_10pts_mtm_ltv": [
+      0.3088005582747122,
+      0.3913460511715385
+    ],
+    "lgd_mtm60_hpi+40pct": [
+      0.09049457338349265,
+      0.14487407456735435
+    ],
+    "lgd_mtm100_hpi-10pct": [
+      0.33243251491243136,
+      0.3690102228407102
+    ],
+    "lgd_mtm130_hpi-30pct": [
+      0.46752165804592133,
+      0.5440096533995175
+    ]
+  },
+  "severity_r2_note": "severity regression has low R-squared (about 2%): HPI change is statistically significant but explains little of the dispersion",
+  "lgd_by_scenario_point": {
+    "mtm60_hpi+40pct": 0.11948159809649923,
+    "mtm100_hpi-10pct": 0.34942808492083466,
+    "mtm130_hpi-30pct": 0.5026758193522806
+  },
+  "by_mtm_ltv_bucket": [
+    {
+      "mtm_ltv_bucket": "<60",
+      "defaults_resolved": 699,
+      "liquidated": 154,
+      "liquidation_rate": 0.22031473533619456,
+      "mean_severity": 0.4400877704285601,
+      "cure_adjusted_lgd_actual": 0.09695782066666417,
+      "cure_adjusted_lgd_model": 0.10378074717951934
+    },
+    {
+      "mtm_ltv_bucket": "60-80",
+      "defaults_resolved": 1004,
+      "liquidated": 408,
+      "liquidation_rate": 0.4063745019920319,
+      "mean_severity": 0.5418303624974254,
+      "cure_adjusted_lgd_actual": 0.2201860437240534,
+      "cure_adjusted_lgd_model": 0.20431279314808776
+    },
+    {
+      "mtm_ltv_bucket": "80-100",
+      "defaults_resolved": 1100,
+      "liquidated": 657,
+      "liquidation_rate": 0.5972727272727273,
+      "mean_severity": 0.5425472239288092,
+      "cure_adjusted_lgd_actual": 0.32404866011020694,
+      "cure_adjusted_lgd_model": 0.2948393488115092
+    },
+    {
+      "mtm_ltv_bucket": "100-120",
+      "defaults_resolved": 232,
+      "liquidated": 139,
+      "liquidation_rate": 0.5991379310344828,
+      "mean_severity": 0.3877856908781202,
+      "cure_adjusted_lgd_actual": 0.23233711651749445,
+      "cure_adjusted_lgd_model": 0.3771826192195228
+    }
+  ],
+  "notes": [
+    "Defaults still open at the data cutoff are excluded (censored); this probably understates liquidation probability.",
+    "Exits 01 (prepaid), 16 (reperforming sale) and 96 (defect) are treated as zero loss.",
+    "Severity above 100% (legal costs, accrued interest) is capped at 100%; gains floored at 0%."
+  ]
+}

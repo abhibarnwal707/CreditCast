@@ -16,3 +16,11 @@ scenario:
   max_loan_quarters: 120
 
 fred_series: [UNRATE, USSTHPI, MORTGAGE30US, GDPC1, GS10]
+
+macro:
+  history_end: 2025Q4          # last realised quarter used for jump-off
+  arima_eval_first_origin: 2000Q4
+  arima_max_p: 3
+  arima_max_q: 3
+  long_run_start: 1990Q1       # long-run means computed from here to history_end
+  reversion_quarters: 4        # linear reversion to long-run mean after the Fed 13 quarters

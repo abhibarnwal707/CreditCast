@@ -1,0 +1,99 @@
+{
+  "cleaning": {
+    "raw_loans": 350000,
+    "removed_by_rule": {
+      "r1_credit_score_missing_or_invalid": 153,
+      "r2_ltv_missing_or_invalid": 18,
+      "r3_dti_missing_or_invalid": 30854
+    },
+    "valid_after_cleaning": 318975
+  },
+  "loans": 50000,
+  "monthly_rows": 3328770,
+  "loan_quarters": 1031382,
+  "default_events": 3747,
+  "prepayment_events": 40422,
+  "other_exit_events": 89,
+  "vintage_range": [
+    2004,
+    2018
+  ],
+  "loans_per_vintage": {
+    "2004": 7143,
+    "2006": 7143,
+    "2007": 7143,
+    "2012": 7143,
+    "2014": 7143,
+    "2016": 7143,
+    "2018": 7142
+  },
+  "observation_window": [
+    "2004Q2",
+    "2026Q2"
+  ],
+  "by_split": {
+    "covid": {
+      "loan_quarters": 111962,
+      "defaults": 776,
+      "default_rate_per_quarter": 0.006930922991729337
+    },
+    "oot": {
+      "loan_quarters": 227095,
+      "defaults": 254,
+      "default_rate_per_quarter": 0.00111847464717409
+    },
+    "other": {
+      "loan_quarters": 126322,
+      "defaults": 124,
+      "default_rate_per_quarter": 0.000981618403761815
+    },
+    "train": {
+      "loan_quarters": 446756,
+      "defaults": 2462,
+      "default_rate_per_quarter": 0.005510838130881286
+    },
+    "validation": {
+      "loan_quarters": 119247,
+      "defaults": 131,
+      "default_rate_per_quarter": 0.0010985601314917775
+    }
+  },
+  "default_rate_by_origination_year": {
+    "2004": {
+      "loans_in_panel": 7103,
+      "defaulted": 512,
+      "ever_default_rate": 0.07208221878079685
+    },
+    "2006": {
+      "loans_in_panel": 7120,
+      "defaulted": 1028,
+      "ever_default_rate": 0.14438202247191012
+    },
+    "2007": {
+      "loans_in_panel": 7097,
+      "defaulted": 1158,
+      "ever_default_rate": 0.1631675355784134
+    },
+    "2012": {
+      "loans_in_panel": 7135,
+      "defaulted": 115,
+      "ever_default_rate": 0.0161177295024527
+    },
+    "2014": {
+      "loans_in_panel": 7122,
+      "defaulted": 219,
+      "ever_default_rate": 0.030749789385004212
+    },
+    "2016": {
+      "loans_in_panel": 7128,
+      "defaulted": 329,
+      "ever_default_rate": 0.04615600448933782
+    },
+    "2018": {
+      "loans_in_panel": 7120,
+      "defaulted": 386,
+      "ever_default_rate": 0.054213483146067415
+    }
+  },
+  "loss_records_credit_event": 1495
+}

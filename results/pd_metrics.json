@@ -1,0 +1,461 @@
+{
+  "features": [
+    "credit_score",
+    "dti",
+    "orig_rate",
+    "age_yrs",
+    "age_yrs_sq",
+    "mtm_ltv",
+    "rate_incentive",
+    "unemp_lag",
+    "unemp_chg_4q",
+    "hpi_yoy",
+    "purpose_cashout",
+    "purpose_refi_nocash",
+    "occ_investor",
+    "occ_second"
+  ],
+  "excluded_from_model": {
+    "ltv": "sign flipped negative when mtm_ltv is included (collinear); mtm_ltv subsumes it. Still used for K-Means segmentation."
+  },
+  "glm": {
+    "train": {
+      "n": 446756,
+      "defaults": 2462,
+      "auc": 0.8269515475911423,
+      "gini": 0.6539030951822846,
+      "ks": 0.5079189628597485,
+      "brier": 0.0054264503384254285,
+      "mean_pred": 0.0055108381308812335,
+      "mean_actual": 0.005510838130881286
+    },
+    "validation": {
+      "n": 119247,
+      "defaults": 131,
+      "auc": 0.8896735211477733,
+      "gini": 0.7793470422955466,
+      "ks": 0.6657717578015554,
+      "brier": 0.0010928218418706807,
+      "mean_pred": 0.0008775774716440327,
+      "mean_actual": 0.0010985601314917775
+    },
+    "deviance": 26844.75563037984,
+    "null_deviance": 30520.3211768087,
+    "pseudo_r2_deviance": 0.1204301070469006,
+    "sign_checks": {
+      "credit_score": true,
+      "mtm_ltv": true,
+      "unemp_lag": true,
+      "hpi_yoy": true
+    },
+    "calibration_validation": [
+      {
+        "decile": 1,
+        "n": 11925,
+        "predicted": 7.6e-05,
+        "actual": 0.0,
+        "defaults": 0
+      },
+      {
+        "decile": 2,
+        "n": 11925,
+        "predicted": 0.000137,
+        "actual": 0.0,
+        "defaults": 0
+      },
+      {
+        "decile": 3,
+        "n": 11924,
+        "predicted": 0.000189,
+        "actual": 8.4e-05,
+        "defaults": 1
+      },
+      {
+        "decile": 4,
+        "n": 11925,
+        "predicted": 0.000242,
+        "actual": 0.000168,
+        "defaults": 2
+      },
+      {
+        "decile": 5,
+        "n": 11925,
+        "predicted": 0.000303,
+        "actual": 0.0,
+        "defaults": 0
+      },
+      {
+        "decile": 6,
+        "n": 11924,
+        "predicted": 0.00038,
+        "actual": 0.000168,
+        "defaults": 2
+      },
+      {
+        "decile": 7,
+        "n": 11925,
+        "predicted": 0.000485,
+        "actual": 0.000839,
+        "defaults": 10
+      },
+      {
+        "decile": 8,
+        "n": 11924,
+        "predicted": 0.000651,
+        "actual": 0.000335,
+        "defaults": 4
+      },
+      {
+        "decile": 9,
+        "n": 11925,
+        "predicted": 0.001058,
+        "actual": 0.002348,
+        "defaults": 28
+      },
+      {
+        "decile": 10,
+        "n": 11925,
+        "predicted": 0.005255,
+        "actual": 0.007044,
+        "defaults": 84
+      }
+    ],
+    "calibration_train": [
+      {
+        "decile": 1,
+        "n": 44676,
+        "predicted": 0.000177,
+        "actual": 4.5e-05,
+        "defaults": 2
+      },
+      {
+        "decile": 2,
+        "n": 44676,
+        "predicted": 0.000415,
+        "actual": 0.000201,
+        "defaults": 9
+      },
+      {
+        "decile": 3,
+        "n": 44675,
+        "predicted": 0.00075,
+        "actual": 0.000537,
+        "defaults": 24
+      },
+      {
+        "decile": 4,
+        "n": 44676,
+        "predicted": 0.001246,
+        "actual": 0.000851,
+        "defaults": 38
+      },
+      {
+        "decile": 5,
+        "n": 44675,
+        "predicted": 0.001956,
+        "actual": 0.001589,
+        "defaults": 71
+      },
+      {
+        "decile": 6,
+        "n": 44676,
+        "predicted": 0.002955,
+        "actual": 0.002955,
+        "defaults": 132
+      },
+      {
+        "decile": 7,
+        "n": 44675,
+        "predicted": 0.004421,
+        "actual": 0.004656,
+        "defaults": 208
+      },
+      {
+        "decile": 8,
+        "n": 44676,
+        "predicted": 0.006739,
+        "actual": 0.007207,
+        "defaults": 322
+      },
+      {
+        "decile": 9,
+        "n": 44675,
+        "predicted": 0.010959,
+        "actual": 0.012625,
+        "defaults": 564
+      },
+      {
+        "decile": 10,
+        "n": 44676,
+        "predicted": 0.025489,
+        "actual": 0.024443,
+        "defaults": 1092
+      }
+    ],
+    "oot": {
+      "n": 227095,
+      "defaults": 254,
+      "auc": 0.7860379640156567,
+      "gini": 0.5720759280313135,
+      "ks": 0.4460546561334525,
+      "brier": 0.001115890521180405,
+      "mean_pred": 0.0005489353688450702,
+      "mean_actual": 0.00111847464717409
+    },
+    "calibration_oot": [
+      {
+        "decile": 1,
+        "n": 22710,
+        "predicted": 7.6e-05,
+        "actual": 8.8e-05,
+        "defaults": 2
+      },
+      {
+        "decile": 2,
+        "n": 22709,
+        "predicted": 0.000135,
+        "actual": 0.000264,
+        "defaults": 6
+      },
+      {
+        "decile": 3,
+        "n": 22710,
+        "predicted": 0.000186,
+        "actual": 0.000352,
+        "defaults": 8
+      },
+      {
+        "decile": 4,
+        "n": 22709,
+        "predicted": 0.000238,
+        "actual": 0.000264,
+        "defaults": 6
+      },
+      {
+        "decile": 5,
+        "n": 22710,
+        "predicted": 0.000296,
+        "actual": 0.000264,
+        "defaults": 6
+      },
+      {
+        "decile": 6,
+        "n": 22709,
+        "predicted": 0.000364,
+        "actual": 0.000749,
+        "defaults": 17
+      },
+      {
+        "decile": 7,
+        "n": 22709,
+        "predicted": 0.000451,
+        "actual": 0.001013,
+        "defaults": 23
+      },
+      {
+        "decile": 8,
+        "n": 22710,
+        "predicted": 0.000579,
+        "actual": 0.001497,
+        "defaults": 34
+      },
+      {
+        "decile": 9,
+        "n": 22709,
+        "predicted": 0.000803,
+        "actual": 0.001629,
+        "defaults": 37
+      },
+      {
+        "decile": 10,
+        "n": 22710,
+        "predicted": 0.002362,
+        "actual": 0.005064,
+        "defaults": 115
+      }
+    ]
+  },
+  "xgboost": {
+    "train": {
+      "n": 446756,
+      "defaults": 2462,
+      "auc": 0.8489558226527917,
+      "gini": 0.6979116453055834,
+      "ks": 0.5472997792531001,
+      "brier": 0.00539923831820488,
+      "mean_pred": 0.00550555856898427,
+      "mean_actual": 0.005510838130881286
+    },
+    "validation": {
+      "n": 119247,
+      "defaults": 131,
+      "auc": 0.8906580960659556,
+      "gini": 0.7813161921319112,
+      "ks": 0.6559382489171502,
+      "brier": 0.00109299854375422,
+      "mean_pred": 0.0014133363729342818,
+      "mean_actual": 0.0010985601314917775
+    },
+    "best_iteration": 230,
+    "calibration_validation": [
+      {
+        "decile": 1,
+        "n": 11925,
+        "predicted": 8.600000001024455e-05,
+        "actual": 0.0,
+        "defaults": 0
+      },
+      {
+        "decile": 2,
+        "n": 11925,
+        "predicted": 0.00015500000154133886,
+        "actual": 0.0,
+        "defaults": 0
+      },
+      {
+        "decile": 3,
+        "n": 11924,
+        "predicted": 0.00022699999681208283,
+        "actual": 0.0,
+        "defaults": 0
+      },
+      {
+        "decile": 4,
+        "n": 11925,
+        "predicted": 0.0003150000120513141,
+        "actual": 8.4e-05,
+        "defaults": 1
+      },
+      {
+        "decile": 5,
+        "n": 11925,
+        "predicted": 0.00043700000969693065,
+        "actual": 8.4e-05,
+        "defaults": 1
+      },
+      {
+        "decile": 6,
+        "n": 11924,
+        "predicted": 0.0006150000263005495,
+        "actual": 0.000252,
+        "defaults": 3
+      },
+      {
+        "decile": 7,
+        "n": 11925,
+        "predicted": 0.0008919999818317592,
+        "actual": 0.000252,
+        "defaults": 3
+      },
+      {
+        "decile": 8,
+        "n": 11924,
+        "predicted": 0.0014039999805390835,
+        "actual": 0.001258,
+        "defaults": 15
+      },
+      {
+        "decile": 9,
+        "n": 11925,
+        "predicted": 0.002609000075608492,
+        "actual": 0.00218,
+        "defaults": 26
+      },
+      {
+        "decile": 10,
+        "n": 11925,
+        "predicted": 0.007393000181764364,
+        "actual": 0.006876,
+        "defaults": 82
+      }
+    ],
+    "oot": {
+      "n": 227095,
+      "defaults": 254,
+      "auc": 0.7975223514114972,
+      "gini": 0.5950447028229944,
+      "ks": 0.45915226548603694,
+      "brier": 0.0011152001097798347,
+      "mean_pred": 0.000986583880148828,
+      "mean_actual": 0.00111847464717409
+    },
+    "calibration_oot": [
+      {
+        "decile": 1,
+        "n": 22710,
+        "predicted": 9.100000170292333e-05,
+        "actual": 4.4e-05,
+        "defaults": 1
+      },
+      {
+        "decile": 2,
+        "n": 22709,
+        "predicted": 0.00015199999324977398,
+        "actual": 8.8e-05,
+        "defaults": 2
+      },
+      {
+        "decile": 3,
+        "n": 22710,
+        "predicted": 0.0002099999983329326,
+        "actual": 0.000176,
+        "defaults": 4
+      },
+      {
+        "decile": 4,
+        "n": 22709,
+        "predicted": 0.0002770000137388706,
+        "actual": 0.000352,
+        "defaults": 8
+      },
+      {
+        "decile": 5,
+        "n": 22710,
+        "predicted": 0.0003640000068116933,
+        "actual": 0.000308,
+        "defaults": 7
+      },
+      {
+        "decile": 6,
+        "n": 22709,
+        "predicted": 0.0004910000134259462,
+        "actual": 0.000837,
+        "defaults": 19
+      },
+      {
+        "decile": 7,
+        "n": 22709,
+        "predicted": 0.000686999992467463,
+        "actual": 0.001541,
+        "defaults": 35
+      },
+      {
+        "decile": 8,
+        "n": 22710,
+        "predicted": 0.00101500004529953,
+        "actual": 0.001277,
+        "defaults": 29
+      },
+      {
+        "decile": 9,
+        "n": 22709,
+        "predicted": 0.0016789999790489674,
+        "actual": 0.001585,
+        "defaults": 36
+      },
+      {
+        "decile": 10,
+        "n": 22710,
+        "predicted": 0.004900000058114529,
+        "actual": 0.004976,
+        "defaults": 113
+      }
+    ]
+  },
+  "selection": {
+    "rule": "champion = GLM unless XGBoost validation AUC exceeds it by > 0.02 (interpretability, regulatory standard); decided on validation only",
+    "xgb_minus_glm_validation_auc": 0.0009845749181822683,
+    "champion": "glm"
+  },
+  "oot_note": "OOT set used for the first time in validate.py, after model selection on validation"
+}

@@ -1,0 +1,13 @@
+duckdb
+pandas
+numpy
+scipy
+statsmodels
+scikit-learn
+xgboost
+matplotlib
+pyyaml
+pdfplumber
+fredapi
+python-dotenv
+pytest

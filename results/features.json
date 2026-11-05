@@ -1,0 +1,61 @@
+{
+  "candidates": [
+    "credit_score",
+    "ltv",
+    "dti",
+    "orig_rate",
+    "age_yrs",
+    "age_yrs_sq",
+    "mtm_ltv",
+    "rate_incentive",
+    "unemp_lag",
+    "unemp_chg_4q",
+    "hpi_yoy",
+    "purpose_cashout",
+    "purpose_refi_nocash",
+    "purpose_refi_other",
+    "occ_investor",
+    "occ_second"
+  ],
+  "selected": [
+    "credit_score",
+    "ltv",
+    "dti",
+    "orig_rate",
+    "age_yrs",
+    "age_yrs_sq",
+    "mtm_ltv",
+    "rate_incentive",
+    "unemp_lag",
+    "unemp_chg_4q",
+    "hpi_yoy",
+    "purpose_cashout",
+    "purpose_refi_nocash",
+    "occ_investor",
+    "occ_second"
+  ],
+  "vif_dropped": [
+    {
+      "dropped": "purpose_refi_other",
+      "reason": "zero variance in training period"
+    }
+  ],
+  "final_vif": {
+    "credit_score": 1.2,
+    "ltv": 6.798,
+    "dti": 1.078,
+    "orig_rate": 4.42,
+    "age_yrs": 3.251,
+    "age_yrs_sq": 1.438,
+    "mtm_ltv": 8.961,
+    "rate_incentive": 7.078,
+    "unemp_lag": 5.509,
+    "unemp_chg_4q": 2.828,
+    "hpi_yoy": 2.612,
+    "purpose_cashout": 1.434,
+    "purpose_refi_nocash": 1.439,
+    "occ_investor": 1.044,
+    "occ_second": 1.023
+  },
+  "note": "VIF on training period, standardised; threshold 10"
+}

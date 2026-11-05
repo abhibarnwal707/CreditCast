@@ -1,0 +1,84 @@
+{
+  "k": 3,
+  "silhouette": 0.2520294937524178,
+  "selection_rule": "max silhouette over k=3..8 (k=2 excluded as a trivial split); elbow (inertia) reported",
+  "k_scan": {
+    "2": {
+      "inertia": 95613.32642356178,
+      "silhouette": 0.24815472484479295
+    },
+    "3": {
+      "inertia": 79323.38154034395,
+      "silhouette": 0.2520294937524178
+    },
+    "4": {
+      "inertia": 67411.27249751528,
+      "silhouette": 0.23469750595497152
+    },
+    "5": {
+      "inertia": 59001.72363993976,
+      "silhouette": 0.23030991208716067
+    },
+    "6": {
+      "inertia": 53556.027240509095,
+      "silhouette": 0.2316034736765453
+    },
+    "7": {
+      "inertia": 49654.315065767296,
+      "silhouette": 0.22386520002664512
+    },
+    "8": {
+      "inertia": 45924.557861485504,
+      "silhouette": 0.22776192258824107
+    }
+  },
+  "fit_on": "training-period loans only",
+  "n_train_loans": 32745,
+  "scaler_mean": {
+    "credit_score": 736.6549396854482,
+    "ltv": 70.48804397617957,
+    "dti": 34.378958619636585,
+    "orig_rate": 5.354316506336845
+  },
+  "scaler_scale": {
+    "credit_score": 54.479339919299946,
+    "ltv": 17.44968953772814,
+    "dti": 11.63842775180972,
+    "orig_rate": 1.213121118538188
+  },
+  "segment_profiles": [
+    {
+      "segment": 0,
+      "loans": 17608,
+      "mean_fico": 701.6761699227624,
+      "mean_ltv": 78.20564516129032,
+      "mean_dti": 39.72450022716947,
+      "mean_orig_rate": 6.004019195820082,
+      "train_loan_quarters": 246202,
+      "train_defaults": 2250,
+      "train_default_rate_per_quarter": 0.009138837214969822
+    },
+    {
+      "segment": 1,
+      "loans": 8538,
+      "mean_fico": 758.9260951042398,
+      "mean_ltv": 43.0507144530335,
+      "mean_dti": 30.456898571093934,
+      "mean_orig_rate": 5.069783672991332,
+      "train_loan_quarters": 97112,
+      "train_defaults": 131,
+      "train_default_rate_per_quarter": 0.0013489579042754757
+    },
+    {
+      "segment": 2,
+      "loans": 23679,
+      "mean_fico": 763.403226487605,
+      "mean_ltv": 77.6764221462055,
+      "mean_dti": 32.07255373960049,
+      "mean_orig_rate": 4.170538198403649,
+      "train_loan_quarters": 103442,
+      "train_defaults": 81,
+      "train_default_rate_per_quarter": 0.0007830475048819629
+    }
+  ]
+}

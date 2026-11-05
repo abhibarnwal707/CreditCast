@@ -1,0 +1,148 @@
+{
+  "thresholds": {
+    "watch": 0.1,
+    "shifted": 0.25
+  },
+  "reference": "training period (<= 2014Q4)",
+  "vs_oot": {
+    "predicted_pd_score": {
+      "psi": 2.5039240598085084,
+      "flag": "shifted"
+    },
+    "credit_score": {
+      "psi": 0.18906366528437707,
+      "flag": "watch"
+    },
+    "dti": {
+      "psi": 0.15930379177084966,
+      "flag": "watch"
+    },
+    "orig_rate": {
+      "psi": 2.6291976465176634,
+      "flag": "shifted"
+    },
+    "age_yrs": {
+      "psi": 0.08343978574572355,
+      "flag": "stable"
+    },
+    "age_yrs_sq": {
+      "psi": 0.04778211566035674,
+      "flag": "stable"
+    },
+    "mtm_ltv": {
+      "psi": 0.2355372133682273,
+      "flag": "watch"
+    },
+    "rate_incentive": {
+      "psi": 0.34195743898006414,
+      "flag": "shifted"
+    },
+    "unemp_lag": {
+      "psi": 7.696022227419111,
+      "flag": "shifted"
+    },
+    "unemp_chg_4q": {
+      "psi": 5.354576047145374,
+      "flag": "shifted"
+    },
+    "hpi_yoy": {
+      "psi": 6.671173714939046,
+      "flag": "shifted"
+    },
+    "purpose_cashout": {
+      "psi": 0.0,
+      "flag": "stable"
+    },
+    "purpose_refi_nocash": {
+      "psi": 0.0,
+      "flag": "stable"
+    },
+    "occ_investor": {
+      "psi": 0.0,
+      "flag": "stable"
+    },
+    "occ_second": {
+      "psi": 0.0,
+      "flag": "stable"
+    }
+  },
+  "vs_recent_2024_on": {
+    "predicted_pd_score": {
+      "psi": 3.7749664259301112,
+      "flag": "shifted"
+    },
+    "credit_score": {
+      "psi": 0.19281858594951184,
+      "flag": "watch"
+    },
+    "dti": {
+      "psi": 0.1616240129316112,
+      "flag": "watch"
+    },
+    "orig_rate": {
+      "psi": 2.6587214813925812,
+      "flag": "shifted"
+    },
+    "age_yrs": {
+      "psi": 7.147401462860358,
+      "flag": "shifted"
+    },
+    "age_yrs_sq": {
+      "psi": 2.5594280576604147,
+      "flag": "shifted"
+    },
+    "mtm_ltv": {
+      "psi": 5.979153469761945,
+      "flag": "shifted"
+    },
+    "rate_incentive": {
+      "psi": 5.516927141002939,
+      "flag": "shifted"
+    },
+    "unemp_lag": {
+      "psi": 8.573604011876109,
+      "flag": "shifted"
+    },
+    "unemp_chg_4q": {
+      "psi": 7.040421278575565,
+      "flag": "shifted"
+    },
+    "hpi_yoy": {
+      "psi": 5.760446363326336,
+      "flag": "shifted"
+    },
+    "purpose_cashout": {
+      "psi": 0.0,
+      "flag": "stable"
+    },
+    "purpose_refi_nocash": {
+      "psi": 0.0,
+      "flag": "stable"
+    },
+    "occ_investor": {
+      "psi": 0.0,
+      "flag": "stable"
+    },
+    "occ_second": {
+      "psi": 0.0,
+      "flag": "stable"
+    }
+  },
+  "vs_oot_summary": {
+    "variables_monitored": 15,
+    "max_psi": 7.696022227419111,
+    "max_psi_variable": "unemp_lag",
+    "n_stable": 6,
+    "n_watch": 3,
+    "n_shifted": 6
+  },
+  "vs_recent_2024_on_summary": {
+    "variables_monitored": 15,
+    "max_psi": 8.573604011876109,
+    "max_psi_variable": "unemp_lag",
+    "n_stable": 4,
+    "n_watch": 2,
+    "n_shifted": 9
+  },
+  "note": "macro variables (unemployment, HPI growth, rates) shift by construction between the crisis-heavy training window and the benign 2017-2019 window"
+}

@@ -1,0 +1,802 @@
+{
+  "oot_window": "2017Q1-2019Q4",
+  "oot_metrics_glm": {
+    "n": 227095,
+    "defaults": 254,
+    "auc": 0.7860379640156567,
+    "gini": 0.5720759280313135,
+    "ks": 0.4460546561334525,
+    "brier": 0.001115890521180405,
+    "mean_pred": 0.0005489353688450702,
+    "mean_actual": 0.00111847464717409
+  },
+  "oot_metrics_xgboost": {
+    "n": 227095,
+    "defaults": 254,
+    "auc": 0.7975223514114972,
+    "gini": 0.5950447028229944,
+    "ks": 0.45915226548603694,
+    "brier": 0.0011152001097798347,
+    "mean_pred": 0.000986583880148828,
+    "mean_actual": 0.00111847464717409
+  },
+  "hosmer_lemeshow_glm_oot": {
+    "chi2": 154.25829847491013,
+    "df": 8,
+    "p_value": 0.0,
+    "note": "rare events: expected counts in low deciles are tiny, so the test is only indicative"
+  },
+  "calibration_by_decile_glm_oot": [
+    {
+      "decile": 1,
+      "n": 22710,
+      "predicted": 7.6e-05,
+      "actual": 8.8e-05,
+      "defaults": 2
+    },
+    {
+      "decile": 2,
+      "n": 22709,
+      "predicted": 0.000135,
+      "actual": 0.000264,
+      "defaults": 6
+    },
+    {
+      "decile": 3,
+      "n": 22710,
+      "predicted": 0.000186,
+      "actual": 0.000352,
+      "defaults": 8
+    },
+    {
+      "decile": 4,
+      "n": 22709,
+      "predicted": 0.000238,
+      "actual": 0.000264,
+      "defaults": 6
+    },
+    {
+      "decile": 5,
+      "n": 22710,
+      "predicted": 0.000296,
+      "actual": 0.000264,
+      "defaults": 6
+    },
+    {
+      "decile": 6,
+      "n": 22709,
+      "predicted": 0.000364,
+      "actual": 0.000749,
+      "defaults": 17
+    },
+    {
+      "decile": 7,
+      "n": 22709,
+      "predicted": 0.000451,
+      "actual": 0.001013,
+      "defaults": 23
+    },
+    {
+      "decile": 8,
+      "n": 22710,
+      "predicted": 0.000579,
+      "actual": 0.001497,
+      "defaults": 34
+    },
+    {
+      "decile": 9,
+      "n": 22709,
+      "predicted": 0.000803,
+      "actual": 0.001629,
+      "defaults": 37
+    },
+    {
+      "decile": 10,
+      "n": 22710,
+      "predicted": 0.002362,
+      "actual": 0.005064,
+      "defaults": 115
+    }
+  ],
+  "calibration_by_segment_glm_oot": [
+    {
+      "segment": 0,
+      "loan_quarters": 30924,
+      "defaults": 118,
+      "pred_defaults": 58.425019344401946,
+      "pred_rate": 0.0018893098998965835,
+      "actual_rate": 0.0038158064933385073,
+      "binomial_test_p": 5.55620801609804e-12
+    },
+    {
+      "segment": 1,
+      "loan_quarters": 31480,
+      "defaults": 34,
+      "pred_defaults": 8.09629626316235,
+      "pred_rate": 0.00025718857252739354,
+      "actual_rate": 0.0010800508259212198,
+      "binomial_test_p": 1.0094764999590502e-11
+    },
+    {
+      "segment": 2,
+      "loan_quarters": 164691,
+      "defaults": 102,
+      "pred_defaults": 58.139161980306916,
+      "pred_rate": 0.00035301966701463297,
+      "actual_rate": 0.0006193416762300308,
+      "binomial_test_p": 1.765518954804692e-07
+    }
+  ],
+  "oot_quarterly_default_rate": {
+    "mape": 0.43317152937281317,
+    "by_quarter": [
+      {
+        "quarter": "2017Q1",
+        "pred": 0.0006480476977800775,
+        "actual": 0.000841798080700376,
+        "defaults": 15
+      },
+      {
+        "quarter": "2017Q2",
+        "pred": 0.0006283558514706062,
+        "actual": 0.0011540998021543195,
+        "defaults": 21
+      },
+      {
+        "quarter": "2017Q3",
+        "pred": 0.000558577467908693,
+        "actual": 0.0005650675255693056,
+        "defaults": 10
+      },
+      {
+        "quarter": "2017Q4",
+        "pred": 0.0005444620328350814,
+        "actual": 0.003027656477438137,
+        "defaults": 52
+      },
+      {
+        "quarter": "2018Q1",
+        "pred": 0.0005238919984348771,
+        "actual": 0.0013241844227759722,
+        "defaults": 22
+      },
+      {
+        "quarter": "2018Q2",
+        "pred": 0.000508044820085583,
+        "actual": 0.00040847289490575947,
+        "defaults": 7
+      },
+      {
+        "quarter": "2018Q3",
+        "pred": 0.0005152104984058345,
+        "actual": 0.0009676899091446697,
+        "defaults": 18
+      },
+      {
+        "quarter": "2018Q4",
+        "pred": 0.0005054690863772123,
+        "actual": 0.0007039066820855749,
+        "defaults": 14
+      },
+      {
+        "quarter": "2019Q1",
+        "pred": 0.0005594483848206124,
+        "actual": 0.0012173424477947374,
+        "defaults": 26
+      },
+      {
+        "quarter": "2019Q2",
+        "pred": 0.000565245216088668,
+        "actual": 0.0010635838150289017,
+        "defaults": 23
+      },
+      {
+        "quarter": "2019Q3",
+        "pred": 0.0005232954420145043,
+        "actual": 0.001048667715334382,
+        "defaults": 22
+      },
+      {
+        "quarter": "2019Q4",
+        "pred": 0.0005121579286028913,
+        "actual": 0.0011997000749812547,
+        "defaults": 24
+      }
+    ],
+    "overall_pred": 0.0005489353688450702,
+    "overall_actual": 0.00111847464717409
+  },
+  "forward_backtest": {
+    "origin": "2015Q4",
+    "end": "2019Q4",
+    "loans_alive_at_origin": 13820,
+    "quarters": 16,
+    "predicted_cumulative_default_rate": 0.00857809750611875,
+    "actual_cumulative_default_rate": 0.015484804630969611,
+    "predicted_defaults": 118.54930753456111,
+    "actual_defaults": 214.00000000000003,
+    "ratio_pred_to_actual": 0.5539687267970145,
+    "by_quarter": [
+      {
+        "quarter": "2016Q1",
+        "pred": 0.0008968186872998467,
+        "actual": 0.001447178002894356
+      },
+      {
+        "quarter": "2016Q2",
+        "pred": 0.0008257790592857608,
+        "actual": 0.001085383502170767
+      },
+      {
+        "quarter": "2016Q3",
+        "pred": 0.0007574479440928287,
+        "actual": 0.0007959479015918958
+      },
+      {
+        "quarter": "2016Q4",
+        "pred": 0.0007020964674823198,
+        "actual": 0.0012301013024602027
+      },
+      {
+        "quarter": "2017Q1",
+        "pred": 0.0006593314831171576,
+        "actual": 0.001085383502170767
+      },
+      {
+        "quarter": "2017Q2",
+        "pred": 0.0006226892799612958,
+        "actual": 0.001447178002894356
+      },
+      {
+        "quarter": "2017Q3",
+        "pred": 0.0005325665323258742,
+        "actual": 0.000723589001447178
+      },
+      {
+        "quarter": "2017Q4",
+        "pred": 0.0004956648587096862,
+        "actual": 0.0020260492040520984
+      },
+      {
+        "quarter": "2018Q1",
+        "pred": 0.0004571650232427381,
+        "actual": 0.001085383502170767
+      },
+      {
+        "quarter": "2018Q2",
+        "pred": 0.0004260754368132489,
+        "actual": 0.000361794500723589
+      },
+      {
+        "quarter": "2018Q3",
+        "pred": 0.0004135734719964291,
+        "actual": 0.0007959479015918958
+      },
+      {
+        "quarter": "2018Q4",
+        "pred": 0.0003836453691767532,
+        "actual": 0.000723589001447178
+      },
+      {
+        "quarter": "2019Q1",
+        "pred": 0.0003945731603032885,
+        "actual": 0.001085383502170767
+      },
+      {
+        "quarter": "2019Q2",
+        "pred": 0.00037553501696831784,
+        "actual": 0.0007959479015918958
+      },
+      {
+        "quarter": "2019Q3",
+        "pred": 0.0003303597771026493,
+        "actual": 0.000361794500723589
+      },
+      {
+        "quarter": "2019Q4",
+        "pred": 0.00030477593824055374,
+        "actual": 0.0004341534008683068
+      }
+    ],
+    "note": "loans alive at origin projected with REALISED macro; prepayment model refit on data to the origin only"
+  },
+  "covid_appendix": {
+    "covid_window": [
+      "2020Q1",
+      "2021Q4"
+    ],
+    "covid": {
+      "n": 111962,
+      "defaults": 776,
+      "auc": 0.7217837329701637,
+      "gini": 0.4435674659403275,
+      "ks": 0.3200345905004357,
+      "brier": 0.0068995780246082,
+      "mean_pred": 0.0011454735118136155,
+      "mean_actual": 0.006930922991729337
+    },
+    "post_covid_2022_on": {
+      "n": 126322,
+      "defaults": 124,
+      "auc": 0.6987757717135746,
+      "gini": 0.39755154342714927,
+      "ks": 0.34940293517253224,
+      "brier": 0.0009805657447730762,
+      "mean_pred": 0.00034547662070093184,
+      "mean_actual": 0.000981618403761815
+    },
+    "oot": {
+      "n": 227095,
+      "defaults": 254,
+      "auc": 0.7860379640156567,
+      "gini": 0.5720759280313135,
+      "ks": 0.4460546561334525,
+      "brier": 0.001115890521180405,
+      "mean_pred": 0.0005489353688450702,
+      "mean_actual": 0.00111847464717409
+    },
+    "explanation": "2020-2021 90+ DPD delinquency is dominated by CARES-Act forbearance, not credit deterioration: the actual default rate spikes (the model, built on credit drivers, under-predicts it) while ranking power stays reasonable. These quarters are excluded from all headline metrics."
+  },
+  "rolling_quarterly_auc": [
+    {
+      "qidx": 8060,
+      "n": 14853,
+      "defaults": 23,
+      "actual_rate": 0.00155,
+      "pred_rate": 0.00105,
+      "auc": 0.87366,
+      "quarter": "2015Q1",
+      "period": "validation"
+    },
+    {
+      "qidx": 8061,
+      "n": 15047,
+      "defaults": 18,
+      "actual_rate": 0.0012,
+      "pred_rate": 0.00097,
+      "auc": 0.88502,
+      "quarter": "2015Q2",
+      "period": "validation"
+    },
+    {
+      "qidx": 8062,
+      "n": 14588,
+      "defaults": 13,
+      "actual_rate": 0.00089,
+      "pred_rate": 0.00098,
+      "auc": 0.92667,
+      "quarter": "2015Q3",
+      "period": "validation"
+    },
+    {
+      "qidx": 8063,
+      "n": 14235,
+      "defaults": 14,
+      "actual_rate": 0.00098,
+      "pred_rate": 0.00089,
+      "auc": 0.91457,
+      "quarter": "2015Q4",
+      "period": "validation"
+    },
+    {
+      "qidx": 8064,
+      "n": 13820,
+      "defaults": 20,
+      "actual_rate": 0.00145,
+      "pred_rate": 0.0009,
+      "auc": 0.84242,
+      "quarter": "2016Q1",
+      "period": "validation"
+    },
+    {
+      "qidx": 8065,
+      "n": 14351,
+      "defaults": 15,
+      "actual_rate": 0.00105,
+      "pred_rate": 0.00083,
+      "auc": 0.9186,
+      "quarter": "2016Q2",
+      "period": "validation"
+    },
+    {
+      "qidx": 8066,
+      "n": 15594,
+      "defaults": 11,
+      "actual_rate": 0.00071,
+      "pred_rate": 0.00075,
+      "auc": 0.87046,
+      "quarter": "2016Q3",
+      "period": "validation"
+    },
+    {
+      "qidx": 8067,
+      "n": 16759,
+      "defaults": 17,
+      "actual_rate": 0.00101,
+      "pred_rate": 0.00069,
+      "auc": 0.90255,
+      "quarter": "2016Q4",
+      "period": "validation"
+    },
+    {
+      "qidx": 8068,
+      "n": 17819,
+      "defaults": 15,
+      "actual_rate": 0.00084,
+      "pred_rate": 0.00065,
+      "auc": 0.9293,
+      "quarter": "2017Q1",
+      "period": "oot"
+    },
+    {
+      "qidx": 8069,
+      "n": 18196,
+      "defaults": 21,
+      "actual_rate": 0.00115,
+      "pred_rate": 0.00063,
+      "auc": 0.8708,
+      "quarter": "2017Q2",
+      "period": "oot"
+    },
+    {
+      "qidx": 8070,
+      "n": 17697,
+      "defaults": 10,
+      "actual_rate": 0.00057,
+      "pred_rate": 0.00056,
+      "auc": 0.85869,
+      "quarter": "2017Q3",
+      "period": "oot"
+    },
+    {
+      "qidx": 8071,
+      "n": 17175,
+      "defaults": 52,
+      "actual_rate": 0.00303,
+      "pred_rate": 0.00054,
+      "auc": 0.7813,
+      "quarter": "2017Q4",
+      "period": "oot"
+    },
+    {
+      "qidx": 8072,
+      "n": 16614,
+      "defaults": 22,
+      "actual_rate": 0.00132,
+      "pred_rate": 0.00052,
+      "auc": 0.77195,
+      "quarter": "2018Q1",
+      "period": "oot"
+    },
+    {
+      "qidx": 8073,
+      "n": 17137,
+      "defaults": 7,
+      "actual_rate": 0.00041,
+      "pred_rate": 0.00051,
+      "auc": 0.78456,
+      "quarter": "2018Q2",
+      "period": "oot"
+    },
+    {
+      "qidx": 8074,
+      "n": 18601,
+      "defaults": 18,
+      "actual_rate": 0.00097,
+      "pred_rate": 0.00052,
+      "auc": 0.81076,
+      "quarter": "2018Q3",
+      "period": "oot"
+    },
+    {
+      "qidx": 8075,
+      "n": 19889,
+      "defaults": 14,
+      "actual_rate": 0.0007,
+      "pred_rate": 0.00051,
+      "auc": 0.81869,
+      "quarter": "2018Q4",
+      "period": "oot"
+    },
+    {
+      "qidx": 8076,
+      "n": 21358,
+      "defaults": 26,
+      "actual_rate": 0.00122,
+      "pred_rate": 0.00056,
+      "auc": 0.63682,
+      "quarter": "2019Q1",
+      "period": "oot"
+    },
+    {
+      "qidx": 8077,
+      "n": 21625,
+      "defaults": 23,
+      "actual_rate": 0.00106,
+      "pred_rate": 0.00057,
+      "auc": 0.7816,
+      "quarter": "2019Q2",
+      "period": "oot"
+    },
+    {
+      "qidx": 8078,
+      "n": 20979,
+      "defaults": 22,
+      "actual_rate": 0.00105,
+      "pred_rate": 0.00052,
+      "auc": 0.68889,
+      "quarter": "2019Q3",
+      "period": "oot"
+    },
+    {
+      "qidx": 8079,
+      "n": 20005,
+      "defaults": 24,
+      "actual_rate": 0.0012,
+      "pred_rate": 0.00051,
+      "auc": 0.82556,
+      "quarter": "2019Q4",
+      "period": "oot"
+    },
+    {
+      "qidx": 8080,
+      "n": 18967,
+      "defaults": 16,
+      "actual_rate": 0.00084,
+      "pred_rate": 0.0005,
+      "auc": 0.82581,
+      "quarter": "2020Q1",
+      "period": "covid"
+    },
+    {
+      "qidx": 8081,
+      "n": 18024,
+      "defaults": 347,
+      "actual_rate": 0.01925,
+      "pred_rate": 0.00051,
+      "auc": 0.70343,
+      "quarter": "2020Q2",
+      "period": "covid"
+    },
+    {
+      "qidx": 8082,
+      "n": 16170,
+      "defaults": 239,
+      "actual_rate": 0.01478,
+      "pred_rate": 0.00405,
+      "auc": 0.6881,
+      "quarter": "2020Q3",
+      "period": "covid"
+    },
+    {
+      "qidx": 8083,
+      "n": 14373,
+      "defaults": 81,
+      "actual_rate": 0.00564,
+      "pred_rate": 0.0015,
+      "auc": 0.74002,
+      "quarter": "2020Q4",
+      "period": "covid"
+    },
+    {
+      "qidx": 8084,
+      "n": 12842,
+      "defaults": 42,
+      "actual_rate": 0.00327,
+      "pred_rate": 0.00087,
+      "auc": 0.768,
+      "quarter": "2021Q1",
+      "period": "covid"
+    },
+    {
+      "qidx": 8085,
+      "n": 11542,
+      "defaults": 27,
+      "actual_rate": 0.00234,
+      "pred_rate": 0.0007,
+      "auc": 0.63631,
+      "quarter": "2021Q2",
+      "period": "covid"
+    },
+    {
+      "qidx": 8086,
+      "n": 10446,
+      "defaults": 12,
+      "actual_rate": 0.00115,
+      "pred_rate": 0.00016,
+      "auc": 0.63446,
+      "quarter": "2021Q3",
+      "period": "covid"
+    },
+    {
+      "qidx": 8087,
+      "n": 9598,
+      "defaults": 12,
+      "actual_rate": 0.00125,
+      "pred_rate": 0.00018,
+      "auc": 0.83549,
+      "quarter": "2021Q4",
+      "period": "covid"
+    },
+    {
+      "qidx": 8088,
+      "n": 8906,
+      "defaults": 9,
+      "actual_rate": 0.00101,
+      "pred_rate": 0.00018,
+      "auc": 0.87995,
+      "quarter": "2022Q1",
+      "period": "other"
+    },
+    {
+      "qidx": 8089,
+      "n": 8422,
+      "defaults": 11,
+      "actual_rate": 0.00131,
+      "pred_rate": 0.00017,
+      "auc": 0.84214,
+      "quarter": "2022Q2",
+      "period": "other"
+    },
+    {
+      "qidx": 8090,
+      "n": 8034,
+      "defaults": 9,
+      "actual_rate": 0.00112,
+      "pred_rate": 0.00017,
+      "auc": 0.76021,
+      "quarter": "2022Q3",
+      "period": "other"
+    },
+    {
+      "qidx": 8091,
+      "n": 7801,
+      "defaults": 18,
+      "actual_rate": 0.00231,
+      "pred_rate": 0.00022,
+      "auc": 0.68625,
+      "quarter": "2022Q4",
+      "period": "other"
+    },
+    {
+      "qidx": 8092,
+      "n": 7630,
+      "defaults": 9,
+      "actual_rate": 0.00118,
+      "pred_rate": 0.00032,
+      "auc": 0.73541,
+      "quarter": "2023Q1",
+      "period": "other"
+    },
+    {
+      "qidx": 8093,
+      "n": 7473,
+      "defaults": 7,
+      "actual_rate": 0.00094,
+      "pred_rate": 0.00036,
+      "auc": 0.72611,
+      "quarter": "2023Q2",
+      "period": "other"
+    },
+    {
+      "qidx": 8094,
+      "n": 7323,
+      "defaults": 6,
+      "actual_rate": 0.00082,
+      "pred_rate": 0.00041,
+      "auc": 0.68812,
+      "quarter": "2023Q3",
+      "period": "other"
+    },
+    {
+      "qidx": 8095,
+      "n": 7148,
+      "defaults": 5,
+      "actual_rate": 0.0007,
+      "pred_rate": 0.00044,
+      "auc": 0.88837,
+      "quarter": "2023Q4",
+      "period": "other"
+    },
+    {
+      "qidx": 8096,
+      "n": 7008,
+      "defaults": 8,
+      "actual_rate": 0.00114,
+      "pred_rate": 0.00044,
+      "auc": 0.76736,
+      "quarter": "2024Q1",
+      "period": "other"
+    },
+    {
+      "qidx": 8097,
+      "n": 6867,
+      "defaults": 7,
+      "actual_rate": 0.00102,
+      "pred_rate": 0.00041,
+      "auc": 0.75419,
+      "quarter": "2024Q2",
+      "period": "other"
+    },
+    {
+      "qidx": 8098,
+      "n": 6733,
+      "defaults": 7,
+      "actual_rate": 0.00104,
+      "pred_rate": 0.00042,
+      "auc": 0.56879,
+      "quarter": "2024Q3",
+      "period": "other"
+    },
+    {
+      "qidx": 8099,
+      "n": 6580,
+      "defaults": 4,
+      "actual_rate": 0.00061,
+      "pred_rate": 0.00043,
+      "auc": 0.69484,
+      "quarter": "2024Q4",
+      "period": "other"
+    },
+    {
+      "qidx": 8100,
+      "n": 6428,
+      "defaults": 5,
+      "actual_rate": 0.00078,
+      "pred_rate": 0.0004,
+      "auc": 0.82656,
+      "quarter": "2025Q1",
+      "period": "other"
+    },
+    {
+      "qidx": 8101,
+      "n": 6297,
+      "defaults": 4,
+      "actual_rate": 0.00064,
+      "pred_rate": 0.00041,
+      "auc": 0.5487,
+      "quarter": "2025Q2",
+      "period": "other"
+    },
+    {
+      "qidx": 8102,
+      "n": 6133,
+      "defaults": 6,
+      "actual_rate": 0.00098,
+      "pred_rate": 0.00041,
+      "auc": 0.47688,
+      "quarter": "2025Q3",
+      "period": "other"
+    },
+    {
+      "qidx": 8103,
+      "n": 5980,
+      "defaults": 2,
+      "actual_rate": 0.00033,
+      "pred_rate": 0.00041,
+      "auc": null,
+      "quarter": "2025Q4",
+      "period": "other"
+    },
+    {
+      "qidx": 8104,
+      "n": 5860,
+      "defaults": 2,
+      "actual_rate": 0.00034,
+      "pred_rate": 0.0004,
+      "auc": null,
+      "quarter": "2026Q1",
+      "period": "other"
+    },
+    {
+      "qidx": 8105,
+      "n": 5699,
+      "defaults": 5,
+      "actual_rate": 0.00088,
+      "pred_rate": 0.00038,
+      "auc": 0.87043,
+      "quarter": "2026Q2",
+      "period": "other"
+    }
+  ]
+}
