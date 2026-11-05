@@ -8,3 +8,4 @@ __pycache__/
 *.duckdb
 *.parquet
 .DS_Store
+CLAUDE.md
