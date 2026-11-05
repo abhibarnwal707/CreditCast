@@ -1,0 +1,18 @@
+seed: 42
+n_loans: 50000
+
+splits:
+  train_end: 2014Q4
+  val_start: 2015Q1
+  val_end: 2016Q4
+  oot_start: 2017Q1
+  oot_end: 2019Q4
+  covid_exclude: [2020Q1, 2021Q4]
+
+scenario:
+  jump_off: 2025Q4
+  horizon_quarters: 13
+  stress_horizon_quarters: 9
+  max_loan_quarters: 120
+
+fred_series: [UNRATE, USSTHPI, MORTGAGE30US, GDPC1, GS10]

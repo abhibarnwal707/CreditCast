@@ -1,0 +1,10 @@
+data/
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+*.duckdb
+*.parquet
+.DS_Store
